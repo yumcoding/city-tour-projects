@@ -10,15 +10,20 @@ class Tour extends Component {
     this.setState({ showInfo: !this.state.showInfo });
   };
 
-  render() {
-    const { id, city, img, name, info } = this.props.tour;
+  handleRemove = () => {
+    const { id } = this.props.tour;
     const { removeTour } = this.props;
+    removeTour(id);
+  };
+
+  render() {
+    const { city, img, name, info } = this.props.tour;
 
     return (
       <article className="tour">
         <div className="img-container">
           <img src={img} alt={name} />
-          <span className="close-btn">
+          <span className="close-btn" onClick={this.handleRemove}>
             <i className="fas fa-window-close" />
           </span>
         </div>

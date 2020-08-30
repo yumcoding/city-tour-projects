@@ -9,7 +9,8 @@ class index extends Component {
   };
 
   removeTour = (id) => {
-    console.log(id);
+    const { tours } = this.state;
+    this.setState({ tours: tours.filter((tour) => tour.id !== id) });
   };
   render() {
     const { tours } = this.state;
