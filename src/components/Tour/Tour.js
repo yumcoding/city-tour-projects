@@ -6,7 +6,7 @@ class Tour extends Component {
     showInfo: false,
   };
 
-  handleClick = () => {
+  handleInfoToggle = () => {
     this.setState({ showInfo: !this.state.showInfo });
   };
 
@@ -34,7 +34,7 @@ class Tour extends Component {
             info{" "}
             <span>
               <i
-                onClick={this.handleClick}
+                onClick={this.handleInfoToggle}
                 className="fas fa-caret-square-down"
               />
             </span>
