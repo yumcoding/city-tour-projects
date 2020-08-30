@@ -2,7 +2,15 @@ import React, { Component } from "react";
 
 class Tour extends Component {
   render() {
-    return <div>Hello from Tour</div>;
+    const { city, img, name, info } = this.props.tour;
+    return (
+      <div>
+        <h1>{city}</h1>
+        <img src={img} alt={city} />
+        <h3>{name}</h3>
+        <p>{info}</p>
+      </div>
+    );
   }
 }
 
