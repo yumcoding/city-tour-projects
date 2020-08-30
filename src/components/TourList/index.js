@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Tour from "../Tour";
 import { tourData } from "../../tourData";
+import "./tourlist.scss";
 
 class index extends Component {
   state = {
